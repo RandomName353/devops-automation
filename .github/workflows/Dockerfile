@@ -12,7 +12,7 @@ COPY mvnw .
 COPY mvnw.cmd .
 
 # Baixa as dependências (esta camada será cacheada)
-RUN chmod +x mvnw && ./mvnw dependency:go-offline -B
+RUN chmod +x mvnw && ./mvnw validate dependency:go-offline -B
 
 # Copia o código fonte
 COPY src ./src
