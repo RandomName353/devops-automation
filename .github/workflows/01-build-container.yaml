@@ -33,7 +33,7 @@ jobs:
 
       - name: Build with Maven
         run: ./mvnw clean install
-        working-directory: ${{ github.workspace }}/home/andre/test/devops-automation/.github/workflows/mvnw  # Update to actual subfolder
+        working-directory: ${{ github.workspace }}/home/andre/test/temp-folder  # Update to actual subfolder
 
       - name: 🧪 Run Tests
         run: mvn test
