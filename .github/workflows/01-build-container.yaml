@@ -31,9 +31,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Build with Maven
-        run: ./mvnw clean install
-        working-directory: ${{ github.workspace }}/home/andre/test/temp-folder  # Update to actual subfolder
+      - name: 📦 Build with Maven
+        run: mvn clean package -DskipTests # Update to actual subfolder
 
       - name: 🧪 Run Tests
         run: mvn test
