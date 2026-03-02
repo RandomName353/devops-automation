@@ -1,7 +1,7 @@
 # Multi-stage build para otimizar o tamanho da imagem
 
 # Estágio 1: Build da aplicação
-FROM maven:3.9-eclipse-temurin-17-alpine AS builder
+FROM maven:3.9.10-eclipse-temurin-21-alpine AS builder
 
 WORKDIR /app
 
@@ -21,7 +21,7 @@ COPY src ./src
 RUN ./mvnw clean package -DskipTests
 
 # Estágio 2: Imagem de runtime
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 
