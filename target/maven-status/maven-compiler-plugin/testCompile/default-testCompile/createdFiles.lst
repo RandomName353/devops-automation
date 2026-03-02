@@ -1,0 +1,5 @@
+br/com/java_api/JavaApiApplicationTests.class
+br/com/java_api/controller/CepControllerTest.class
+br/com/java_api/service/CepServiceTest.class
+br/com/java_api/service/SystemInfoServiceTest.class
+br/com/java_api/controller/HelloControllerTest.class
